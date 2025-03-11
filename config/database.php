@@ -45,8 +45,8 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DB_URL'),
-            'host' => env('DB_HOST', '192.168.20.23'),
-            'port' => env('DB_PORT', '3306'),
+            'host' => env('DB_HOST'),
+            'port' => env('DB_PORT'),
             'database' => env('DB_DATABASE', 'db-laravel-user-auth'),
             'username' => env('DB_USERNAME', 'db-laravel-admin'),
             'password' => env('DB_PASSWORD', '123456'),
