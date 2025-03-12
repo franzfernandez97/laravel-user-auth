@@ -16,6 +16,26 @@
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
+        <!-- Birth Date -->
+        <div class="mt-4">
+            <x-input-label for="birth_date" :value="__('Birth Date')" />
+            <x-text-input id="birth_date" class="block mt-1 w-full" type="date" name="birth_date" :value="old('birth_date')" required />
+            <x-input-error :messages="$errors->get('birth_date')" class="mt-2" />
+        </div>
+
+        <!-- Gender -->
+        <div class="mt-4">
+            <x-input-label :value="__('Gender')" />
+            <div class="flex items-center mt-1">
+                <input id="male" type="radio" name="gender" value="M" {{ old('gender') == 'M' ? 'checked' : '' }} required>
+                <label for="male" class="ml-2">Male</label>
+                
+                <input id="female" type="radio" name="gender" value="F" class="ml-4" {{ old('gender') == 'F' ? 'checked' : '' }} required>
+                <label for="female" class="ml-2">Female</label>
+            </div>
+            <x-input-error :messages="$errors->get('gender')" class="mt-2" />
+        </div>
+
         <!-- Password -->
         <div class="mt-4">
             <x-input-label for="password" :value="__('Password')" />
