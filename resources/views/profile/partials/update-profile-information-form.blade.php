@@ -17,12 +17,42 @@
         @csrf
         @method('patch')
 
+        <!-- Name -->
         <div>
             <x-input-label for="name" :value="__('Name')" />
             <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name', $user->name)" required autofocus autocomplete="name" />
             <x-input-error class="mt-2" :messages="$errors->get('name')" />
         </div>
 
+        <!-- Birth Date -->
+        <div class="mt-4">
+            <x-input-label for="birth_date" :value="__('Birth Date')" />
+            <x-text-input id="birth_date" name="birth_date" type="date" class="mt-1 block w-full" :value="old('birth_date', $user->birth_date ? $user->birth_date->format('Y-m-d') : '')" required />
+            <x-input-error class="mt-2" :messages="$errors->get('birth_date')" />
+        </div>
+
+        <!-- Gender -->
+        <div class="mt-4">
+            <x-input-label for="gender" :value="__('Gender')" />
+            
+            <div class="flex gap-4 mt-2">
+                <!-- Male Option -->
+                <label class="inline-flex items-center">
+                    <input type="radio" name="gender" value="M" class="form-radio" {{ old('gender', $user->gender) == 'M' ? 'checked' : '' }} required>
+                    <span class="ml-2">Male</span>
+                </label>
+
+                <!-- Female Option -->
+                <label class="inline-flex items-center">
+                    <input type="radio" name="gender" value="F" class="form-radio" {{ old('gender', $user->gender) == 'F' ? 'checked' : '' }} required>
+                    <span class="ml-2">Female</span>
+                </label>
+            </div>
+
+            <x-input-error class="mt-2" :messages="$errors->get('gender')" />
+        </div>
+
+        <!-- Email -->
         <div>
             <x-input-label for="email" :value="__('Email')" />
             <x-text-input id="email" name="email" type="email" class="mt-1 block w-full" :value="old('email', $user->email)" required autocomplete="username" />
@@ -55,9 +85,21 @@
                     x-data="{ show: true }"
                     x-show="show"
                     x-transition
-                    x-init="setTimeout(() => show = false, 2000)"
-                    class="text-sm text-gray-600"
-                >{{ __('Saved.') }}</p>
+                    x-init="setTimeout(() => show = false, 6000)"
+                    class="text-sm text-green-600"
+                >
+                    {{ __('Profile updated successfully!') }}
+                </p>
+            @elseif (session('status') === 'profile-not-updated')
+                <p
+                    x-data="{ show: true }"
+                    x-show="show"
+                    x-transition
+                    x-init="setTimeout(() => show = false, 6000)"
+                    class="text-sm text-red-600"
+                >
+                    {{ __('No changes were made.') }}
+                </p>
             @endif
         </div>
     </form>

@@ -25,6 +25,8 @@ class ProfileUpdateRequest extends FormRequest
                 'max:255',
                 Rule::unique(User::class)->ignore($this->user()->id),
             ],
+            'birth_date' => ['required', 'date', 'before:today'], // Must be a valid date before today
+            'gender' => ['required', 'in:M,F'], // Must be 'M' or 'F'
         ];
     }
 }
