@@ -18,7 +18,7 @@
                                     {{ auth()->user()->name }}
                                 </h3>
                                 <div class="text-gray-700 dark:text-gray-300 items-center">
-                                    <p>¡Hello user {{ auth()->user()->role }}!</p>
+                                    <p>¡Bienvenido {{ auth()->user()->role }}!</p>
                                     <p>Mail: {{ auth()->user()->email }}</p>
                                     <p>Creation Date: {{ auth()->user()->created_at }}</p>
                                 </div>
