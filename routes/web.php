@@ -8,6 +8,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('admin/dashboard', [UserController::class, 'index'])->middleware(['auth:sanctum', 'admin'])->name('admin.dashboard');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth:sanctum', 'verified'])->name('dashboard');
@@ -19,5 +21,3 @@ Route::middleware('auth:sanctum')->group(function () {
 });
 
 require __DIR__.'/auth.php';
-
-Route::get('admin/dashboard', [UserController::class, 'index'])->middleware(['auth:sanctum', 'admin'])->name('admin.dashboard');
