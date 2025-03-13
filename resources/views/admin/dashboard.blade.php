@@ -5,10 +5,13 @@
         </h2>
     </x-slot>
 
+<<<<<<< HEAD
     @if(session('token'))
         <p>Tu token de acceso: {{ session('token') }}</p>
     @endif
 
+=======
+>>>>>>> 09c9452586cbc11d5373c5984b2daa364e0a3359
     <div class="flex flex-col">
         <div class="flex-grow p-2">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -40,10 +43,17 @@
                         <thead class="bg-gray-200">
                             <tr>
                                 <th class="px-4 py-2 text-left text-sm font-semibold text-gray-600">ID</th>
+<<<<<<< HEAD
                                 <th class="px-4 py-2 text-left text-sm font-semibold text-gray-600">Nombre</th>
                                 <th class="px-4 py-2 text-left text-sm font-semibold text-gray-600">Correo electrónico</th>
                                 <th class="px-4 py-2 text-left text-sm font-semibold text-gray-600">Fecha de cumpleaños</th>
                                 <th class="px-4 py-2 text-left text-sm font-semibold text-gray-600">Rol</th>
+=======
+                                <th class="px-4 py-2 text-left text-sm font-semibold text-gray-600">Name</th>
+                                <th class="px-4 py-2 text-left text-sm font-semibold text-gray-600">Email</th>
+                                <th class="px-4 py-2 text-left text-sm font-semibold text-gray-600">Creation Date</th>
+                                <th class="px-4 py-2 text-left text-sm font-semibold text-gray-600">Role</th>
+>>>>>>> 09c9452586cbc11d5373c5984b2daa364e0a3359
                             </tr>
                         </thead>
                         <tbody>
@@ -52,7 +62,11 @@
                                 <td class="px-4 py-2 text-sm text-gray-600">{{ $usuario->id }}</td>
                                 <td class="px-4 py-2 text-sm text-gray-600">{{ $usuario->name }}</td>
                                 <td class="px-4 py-2 text-sm text-gray-600">{{ $usuario->email }}</td>
+<<<<<<< HEAD
                                 <td class="px-4 py-2 text-sm text-gray-600">{{ $usuario->birth_date }}</td>
+=======
+                                <td class="px-4 py-2 text-sm text-gray-600">{{ $usuario->created_at }}</td>
+>>>>>>> 09c9452586cbc11d5373c5984b2daa364e0a3359
                                 <td class="px-4 py-2 text-sm text-gray-600">{{ $usuario->role }}</td>
                             </tr>
                             @endforeach
@@ -67,4 +81,8 @@
         <p>Desarrollado por FDL</p>
     </footer>
 
+<<<<<<< HEAD
 </x-app-layout>
+=======
+</x-app-layout>
+>>>>>>> 09c9452586cbc11d5373c5984b2daa364e0a3359
