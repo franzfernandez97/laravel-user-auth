@@ -1,5 +1,16 @@
 # Laravel Project Setup Guide
 
+---
+## Realizado Por:
+- David Segura (**Felipesf76**)
+- Franz Fernández (**franzfernandez97**)
+- Luis López (**Felo1991/DDEI-LLOPEZ**)
+
+**Asignatura**
+Seguridad Web
+
+---
+
 ## Requisitos Previos
 
 Este projecto se encuentra desarollado en **Laravel Sail**, el cal solo es soportado por macOS, Linux, and Windows (via WSL2).
@@ -88,7 +99,7 @@ sail php artisan key:generate
 
 ## 7. Ejecutar Migraciones
 
-Ejecuta las migraciones para crear las tablas en la base de datos:
+Ejecuta las migraciones para crear las tablas en la base de datos con sus respectivos registros de prueba
 
 ```bash
 sail php artisan migrate --seed
@@ -102,6 +113,32 @@ sail php artisan migrate --seed
 sail npm install 
 sail npm run dev
 ```
+
+---
+
+## 9. Puedes probar el inicio de sesión con los usuarios por defecto
+
+- Admin:
+
+user: admin@example.com
+pass: password123
+
+- Usuarios
+
+user: guest1@example.com
+pass: password123
+
+user: guest2@example.com
+pass: password123
+
+---
+
+## 10. En la Carpeta POSTMAN  probar los métodos API REST
+
+En la carpeta raíz buscar la colección de API llamado:
+**\laravel-user-auth\postman\postman_collection_laravel-user-auth**
+
+Importala en postman y prueba la generación de token con cualquiera de las credenciales antes mencionadas.
 
 ---
 La aplicación se ejecuta por defecto en `localhost:80`

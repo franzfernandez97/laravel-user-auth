@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "a16643a5-8db1-4483-bfe4-c6da994e408b",
-		"name": "New Collection",
+		"_postman_id": "9646b616-b31e-4b4a-bd7a-3ee7cf545840",
+		"name": "postman_collection_laravel-user-auth",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "33458891"
+		"_exporter_id": "21956738"
 	},
 	"item": [
 		{
@@ -15,21 +15,15 @@
 				"method": "POST",
 				"header": [
 					{
-						"key": "Authorization",
-						"value": "Bearer JToAguUEkGQr34rkIQ6DQSrWwZ4w0BRaUIobA2RZ210b557b",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "Accept",
-						"value": "application/json",
+						"key": "",
+						"value": "",
 						"type": "text",
 						"disabled": true
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\":\"lucholopez9186@gmail.com\",\r\n    \"password\": \"Lflopez5917\"\r\n}",
+					"raw": "{\r\n    \"email\":\"admin@example.com\",\r\n    \"password\": \"password123\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -64,7 +58,7 @@
 					},
 					{
 						"key": "Authorization",
-						"value": "Bearer ObvXWOckc1LKmYUCNhLuhWmcb02iZIxwRB5AzfQS8017fbc4",
+						"value": "Bearer 4TS4ZaleC3HAnRCyUMnrezzBuOfuKdIdsVWiUsKB536a6cc9",
 						"type": "text"
 					}
 				],
@@ -97,7 +91,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Juan Pérez 2\",\r\n    \"email\": \"juanperez@example.com\",\r\n    \"password\": \"12345678\",\r\n    \"password_confirmation\": \"12345678\",\r\n    \"birth_date\": \"1990-01-01\",\r\n    \"gender\": \"C\"\r\n}",
+					"raw": "{\r\n    \"name\": \"Juan Pérez 2\",\r\n    \"email\": \"juanperez@example.com\",\r\n    \"password\": \"12345678\",\r\n    \"password_confirmation\": \"12345678\",\r\n    \"birth_date\": \"1990-01-01\",\r\n    \"gender\": \"M\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -118,7 +112,7 @@
 			"response": []
 		},
 		{
-			"name": "User",
+			"name": "User data",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -130,7 +124,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer ObvXWOckc1LKmYUCNhLuhWmcb02iZIxwRB5AzfQS8017fbc4",
+						"value": "Bearer 4TS4ZaleC3HAnRCyUMnrezzBuOfuKdIdsVWiUsKB536a6cc9",
 						"type": "text"
 					},
 					{
@@ -162,7 +156,7 @@
 			"response": []
 		},
 		{
-			"name": "UserAdmin",
+			"name": "All users",
 			"request": {
 				"auth": {
 					"type": "noauth"
@@ -176,7 +170,7 @@
 					},
 					{
 						"key": "Authorization",
-						"value": "Bearer Hl8UkQFj5LIDsaNM1OS1GeMGIu5Ig6kuAiJUEjRM261e081d",
+						"value": "Bearer 4TS4ZaleC3HAnRCyUMnrezzBuOfuKdIdsVWiUsKB536a6cc9",
 						"type": "text"
 					}
 				],
